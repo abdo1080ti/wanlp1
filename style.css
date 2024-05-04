@@ -1,9 +1,11 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
 }
+
 
 header {
     background-color: #333;
@@ -17,23 +19,29 @@ h1 {
     font-size: 2rem;
 }
 
+
 main {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
     padding: 2rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 section {
-    margin-bottom: 2rem;
+    flex: 1;
+    margin-right: 2rem;
 }
 
 h2 {
     margin-top: 0;
     font-size: 1.5rem;
+    color: #333;
 }
+
 
 textarea {
     width: 100%;
@@ -44,6 +52,7 @@ textarea {
     border-radius: 4px;
     resize: vertical;
 }
+
 
 button {
     background-color: #007bff;
@@ -59,8 +68,206 @@ button:hover {
     background-color: #0056b3;
 }
 
+
 #results {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 4px;
+}
+
+
+#articleSubmission {
+    margin-right: 2rem;
+}
+
+#classificationResults {
+    margin-left: 2rem;
+}
+
+
+#urlForm {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#urlForm input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#urlForm button {
+    background-color: #28a745;
+}
+
+#urlForm button:hover {
+    background-color: #218838;
+}
+
+
+#pieChartContainer {
+    width: 100%; 
+    max-width: 1000px; 
+    margin-right: 20px; 
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+#articleSubmission {
+    margin-bottom: 20px;
+}
+
+
+#articleText {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+#articleUrl {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.file-input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.file-input-label {
+    display: inline-block;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#selectedFileName {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+#fileForm button[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+#submissionAreas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.submissionArea {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+#resultContainer {
+    margin-bottom: 20px;
+}
+
+#resultHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#mainCategoryImage {
+    width: 50px; 
+    height: 50px; 
+    
+}
+
+
+#pieChartWrapper {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#pieChart {
+    width: 100%;
+}
+
+#buttonContainer {
+    margin-bottom: 20px; 
 }

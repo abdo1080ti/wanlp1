@@ -12,18 +12,51 @@
     </header>
     <main>
         <section id="articleSubmission">
-            <h2>Submit an Article</h2>
-            <form id="articleForm">
-                <textarea id="articleText" placeholder="Paste your article here..." required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+            <div id="buttonContainer">
+                <button id="writeTextBtn" onclick="showTextarea()">Write Text</button>
+               
+                <button id="importFileBtn" onclick="showFileInput()">Import File</button>
+            </div>
+            <div id="textAreaContainer">
+                <form id="articleForm" style="display:none;">
+                    <textarea id="articleText" placeholder="Paste your article here..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <form id="urlForm" style="display:none;">
+                    <input type="text" id="articleUrl" placeholder="Enter URL..." required>
+                    <button type="submit">Submit URL</button>
+                </form>
+                <form id="fileForm" style="display:none;">
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" class="file-input" accept=".txt,.pdf" required>
+                        <label for="fileInput" class="file-input-label">Choose File</label>
+                        <span id="selectedFileName"></span>
+                    </div>
+                    <button type="submit">Submit File</button>
+                </form>
+                
+                
+            </div>
         </section>
         <section id="classificationResults">
-            <h2>Classification Results</h2>
-            <div id="results"></div>
+            <div id="resultContainer">
+                <div id="resultHeader">
+                    <h2>Classification Results</h2>
+                    <div id="mainCategoryImage"></div>
+                </div>
+                <div id="results"></div>
+            </div>
+            <div id="pieChartContainer">
+                <h2>Category Distribution</h2>
+                <div id="pieChartWrapper">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
         </section>
+        
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
